@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Flash Cards - Learn Artificial Intelligence</title>
+    <meta name="description" content="Interactive flash cards to learn AI concepts, algorithms, and applications">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-brain"></i>
+                <span>AI Flash Cards</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#cards" class="nav-link">Cards</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <h1 class="hero-title">Master AI with Interactive Flash Cards</h1>
+                <p class="hero-description">Learn artificial intelligence concepts, algorithms, and applications through engaging flash cards designed for all skill levels.</p>
+                <button class="cta-button" onclick="startLearning()">
+                    <i class="fas fa-play"></i>
+                    Start Learning
+                </button>
+            </div>
+        </section>
+
+        <!-- Flash Cards Section -->
+        <section id="cards" class="cards-section">
+            <div class="container">
+                <h2 class="section-title">AI Flash Cards</h2>
+                <div class="card-controls">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="card-counter">
+                        <span id="currentCard">1</span> / <span id="totalCards">10</span>
+                    </div>
+                </div>
+                
+                <div class="flashcard-container">
+                    <div class="flashcard" id="flashcard">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <h3 id="card-question">What is Machine Learning?</h3>
+                            </div>
+                            <div class="flashcard-back">
+                                <p id="card-answer">Machine Learning is a subset of AI that enables computers to learn and improve from experience without being explicitly programmed for every scenario.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="action-btn" onclick="previousCard()">
+                            <i class="fas fa-chevron-left"></i>
+                            Previous
+                        </button>
+                        <button class="action-btn flip-btn" onclick="flipCard()">
+                            <i class="fas fa-sync-alt"></i>
+                            Flip Card
+                        </button>
+                        <button class="action-btn" onclick="nextCard()">
+                            Next
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="category-selector">
+                    <label for="categorySelect">Choose Category:</label>
+                    <select id="categorySelect" onchange="changeCategory()">
+                        <option value="basics">AI Basics</option>
+                        <option value="ml">Machine Learning</option>
+                        <option value="dl">Deep Learning</option>
+                        <option value="nlp">Natural Language Processing</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose Our AI Flash Cards?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Friendly</h3>
+                        <p>Learn on any device with responsive design that adapts to your screen size.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-sync"></i>
+                        <h3>Interactive Learning</h3>
+                        <p>Flip cards to reveal answers and test your knowledge interactively.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Multiple Categories</h3>
+                        <p>Explore different AI domains from basics to advanced concepts.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Track Progress</h3>
+                        <p>Monitor your learning journey with progress tracking and statistics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>Who is this for?</h3>
+                        <p>Our AI flash cards are designed for students, professionals, and anyone interested in learning artificial intelligence concepts at their own pace.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How many cards are there?</h3>
+                        <p>We currently have 40+ flash cards across 4 different categories, with new cards added regularly.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Is it free?</h3>
+                        <p>Yes! All flash cards are completely free to use. No registration required.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-brain"></i>
+                    <span>AI Flash Cards</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#cards">Cards</a>
+                    <a href="#about">About</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI Flash Cards. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
